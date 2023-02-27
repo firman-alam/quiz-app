@@ -18,7 +18,7 @@ import { useAppDispatch, useAppSelector } from '@/redux/hook';
 
 const totalQuestions = 10;
 
-const quiz = () => {
+const Quiz = () => {
   const router = useRouter();
 
   const dispatch = useAppDispatch();
@@ -141,4 +141,4 @@ const quiz = () => {
   );
 };
 
-export default quiz;
+export default Quiz;
