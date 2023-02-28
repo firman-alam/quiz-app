@@ -109,14 +109,7 @@ const Quiz = () => {
           {/* question */}
           <div className={styles.question}>
             <h2>Question</h2>
-            <p>
-              {data[questionNumber]?.question
-                .replace(/&quot;/g, '"')
-                .replace(/&#039;/g, "'")
-                .replace(/&amp;/g, '&')
-                .replace(/&deg;/g, '°')
-                .replace(/&eacute/g, 'é')}
-            </p>
+            <p>{data[questionNumber]?.question}</p>
           </div>
 
           {/* answer button */}
