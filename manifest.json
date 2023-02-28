@@ -1,0 +1,12 @@
+{
+  "short_name": "Quiz",
+  "name": "Quiz App: Optima",
+  "id": "/pages/index.tsx",
+  "start_url": "/pages/index.tsx",
+  "background_color": "#317EFB",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#317EFB",
+  "description": "Quiz App Web Application",
+  "purpose": "any maskable"
+}
