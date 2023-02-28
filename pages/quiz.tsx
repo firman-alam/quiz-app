@@ -1,6 +1,6 @@
 // locals
 import styles from '@/styles/Home.module.css';
-import { firstLetterCaps, handleShuffle, parseQuotes } from '@/utils/functions';
+import { firstLetterCaps } from '@/utils/functions';
 
 // components
 import Navbar from '@/components/Navbar';
@@ -10,7 +10,6 @@ import Multiple from '@/components/Multiple';
 // library
 import { Button, CircularProgress } from '@mui/material';
 import { MouseEvent, useState } from 'react';
-import { RootState } from '@/redux/store';
 import { useGetQuizQuestionsQuery } from '@/redux/api/apiSlice';
 import { setGame } from '@/redux/gameSlice';
 import { useRouter } from 'next/router';

@@ -5,7 +5,7 @@ import FormStart from '@/components/FormStart';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import Result from '@/components/Result';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 export default function Home() {
   const { data: session } = useSession();
@@ -20,17 +20,19 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
-      {session && session.user ? (
-        <main className={styles.main}>
-          {!isStart && !isOver && <FormStart />}
-          {isOver && <Result />}
-        </main>
-      ) : (
-        <main className={styles.main}>
-          <h1>Welcome to the quiz app</h1>
-          <h2>Wanna start? Login first</h2>
-        </main>
-      )}
+      <main className={styles.main}>
+        {session && session.user ? (
+          <>
+            {!isStart && !isOver && <FormStart />}
+            {isOver && <Result />}
+          </>
+        ) : (
+          <>
+            <h1>Welcome to the quiz app</h1>
+            <h2>Wanna start? Login first</h2>
+          </>
+        )}
+      </main>
     </>
   );
 }

@@ -1,13 +1,13 @@
 import { setGame } from '@/redux/gameSlice';
 import { setQuiz } from '@/redux/quizSlice';
 import { useRouter } from 'next/router';
-import { useDispatch } from 'react-redux';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import styles from '@/styles/Home.module.css';
+import { useAppDispatch } from '@/redux/hook';
 
 const Navbar = () => {
   const router = useRouter();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { data: session } = useSession();
 
   return (
